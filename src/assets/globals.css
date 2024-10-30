@@ -1,0 +1,98 @@
+@media only screen and (min-width: 1028px) {
+    .web-view__left-side {
+        display: block;
+        width: calc(100% - 500px);
+    }
+
+    .web-view__right-side {
+        width: 500px;
+        margin: unset;
+    }
+}
+
+.web-view__right-side {
+    width: 100%;
+    max-width: 500px;
+    margin: auto;
+    position: relative;
+    overflow-x: hidden;
+}
+
+.slide, .slide>div {
+    position: absolute;
+    width: 100%;
+}
+
+.slide>div {
+    animation: slide 25s infinite;
+    background-position: 50%;
+    background-size: cover;
+    height: 100%;
+    opacity: 0;
+    transform: scale(1);
+}
+
+.slide>div:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.slide>div:nth-child(2) {
+    animation-delay: 5s;
+}
+
+.slide>div:nth-child(3) {
+    animation-delay: 10s;
+}
+
+.slide>div:nth-child(4) {
+    animation-delay: 15s;
+}
+
+.slide>div:nth-child(5) {
+    animation-delay: 20s;
+}
+
+.slide {
+    background-color: #000;
+    height: 100vh;
+    left: 0;
+    overflow: hidden;
+    top: 0;
+    z-index: 1;
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        transform: scale(1);
+    }
+    5% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+    25% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    30% {
+        opacity: 0;
+        transform: scale(1.15);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.15);
+    }
+}
+
+.animation-bounce {
+    animation: MoveUpDown 3s linear infinite;
+}
+
+@keyframes MoveUpDown {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
