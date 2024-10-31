@@ -16,7 +16,7 @@ export default function SideBar() {
         "linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Desktop.jpg?updatedAt=1698223781539) center center / cover;"
       }
     >
-      <Box color="white" padding="42px">
+      <Box color="#fefefe" padding="42px">
         <Text
           textTransform="uppercase"
           letterSpacing="2px"
@@ -27,16 +27,26 @@ export default function SideBar() {
           Wedding Announcement
         </Text>
 
-        <Heading
-          as="h2"
-          textTransform="uppercase"
-          paddingTop="32px"
-          fontSize="72px"
-          fontWeight="thin"
-          fontFamily={buttler.variable}
-        >
-          Shodiq & <br /> Hani
-        </Heading>
+        <Box paddingTop="32px" textTransform="uppercase" letterSpacing="4px">
+          <Heading
+            as="h2"
+            lineHeight="1"
+            fontSize="4.5rem"
+            fontWeight="light"
+            fontFamily={buttler.variable}
+          >
+            Romeo &
+          </Heading>
+          <Heading
+            as="h2"
+            fontSize="4.5rem"
+            fontWeight="light"
+            fontFamily={buttler.variable}
+            marginTop="-16px"
+          >
+            Juliet
+          </Heading>
+        </Box>
 
         <Text
           fontSize="16px"

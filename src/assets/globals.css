@@ -1,3 +1,40 @@
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: #fefefe;
+}
+
+.button {
+    background-color: #997a5e;
+    border: none;
+    color: #fefefe;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 100%;
+    padding: 10px;
+}
+
+@keyframes slideTop {
+    from {
+        transform: translateY(200%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slide-top {
+    animation: slideTop 1s ease-out;
+}
+
 @media only screen and (min-width: 1028px) {
     .web-view__left-side {
         display: block;
@@ -14,11 +51,11 @@
     width: 100%;
     max-width: 500px;
     margin: auto;
-    position: relative;
     overflow-x: hidden;
 }
 
-.slide, .slide>div {
+.slide,
+.slide>div {
     position: absolute;
     width: 100%;
 }
@@ -66,18 +103,22 @@
         opacity: 0;
         transform: scale(1);
     }
+
     5% {
         opacity: 1;
         transform: scale(1.05);
     }
+
     25% {
         opacity: 1;
         transform: scale(1.1);
     }
+
     30% {
         opacity: 0;
         transform: scale(1.15);
     }
+
     100% {
         opacity: 0;
         transform: scale(1.15);
@@ -89,9 +130,12 @@
 }
 
 @keyframes MoveUpDown {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: translateY(0);
     }
+
     50% {
         transform: translateY(-10px);
     }

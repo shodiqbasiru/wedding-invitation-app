@@ -1,13 +1,18 @@
 import { fonts } from "@/assets/fonts/font";
-import { Box, Flex, Heading, Text, Button } from "@chakra-ui/react";
+import { Box, Flex, Heading, Button } from "@chakra-ui/react";
 
-export default function CoverSection() {
+interface CoverSectionProps { 
+  showInvitation: () => void;
+  isLoading: boolean;
+}
+
+export default function CoverSection({ showInvitation,isLoading }: CoverSectionProps) {
   const { buttler, poppins } = fonts;
 
   return (
     <>
       <Box
-        height="100vh"
+        height="100vh"  
         width="100%"
         padding="2rem"
         color="white"
@@ -42,7 +47,7 @@ export default function CoverSection() {
               fontFamily={buttler.variable}
               lineHeight="1.2"
             >
-              Shodiq & Hani
+              Romeo & Juliet
             </Heading>
 
             <Heading
@@ -53,12 +58,12 @@ export default function CoverSection() {
               fontStyle="italic"
               lineHeight="1.2"
             >
-              #ShodiqHani
+              #RomeoJuliet
             </Heading>
           </Box>
         </Flex>
       </Box>
-      <Box position="absolute" bottom="40" width="100%">
+      <Box position="absolute" bottom="25%" width="100%">
         <Flex alignItems="center" justifyContent="center" width="100%">
           <Button
             colorScheme="gray"
@@ -71,9 +76,16 @@ export default function CoverSection() {
             fontSize="lg"
             fontStyle="italic"
             border="1px solid #1a1b1d"
+            textColor="#1a1b1d"
             transitionProperty="all"
             transitionDuration="200ms"
             className="animation-bounce"
+            _hover={{ opacity: 0.8 }}
+            isLoading={isLoading}
+            onClick={() => {
+              showInvitation();
+              document.getElementById("welcome-section")?.scrollIntoView({ behavior: "smooth" });
+            }}
           >
             Open
           </Button>
