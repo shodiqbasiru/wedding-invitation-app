@@ -6,6 +6,17 @@ body {
     background-color: #fefefe;
 }
 
+.line {
+    position: absolute;
+    border-bottom: 1px solid #fefefe;
+    width: 50%;
+    z-index: 1;
+    top: 50%;
+    left: 28%;
+    transform: translate(-50%, -50%);
+    transform: rotate(45deg);
+}
+
 .button {
     background-color: #997a5e;
     border: none;
@@ -17,6 +28,11 @@ body {
     cursor: pointer;
     border-radius: 100%;
     padding: 10px;
+}
+
+.button:hover {
+    background-color: #fefefe;
+    opacity: 0.5;
 }
 
 @keyframes slideTop {
