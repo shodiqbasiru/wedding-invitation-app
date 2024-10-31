@@ -55,10 +55,10 @@ export default function SideBar() {
           fontWeight="light"
           opacity="0.8"
         >
-          "Aku ingin mencintaimu dengan sederhana; dengan kata yang tak sempat
-          diucapkan kayu kepada api yang menjadikannya abu. Aku ingin
+          &quot;Aku ingin mencintaimu dengan sederhana; dengan kata yang tak
+          sempat diucapkan kayu kepada api yang menjadikannya abu. Aku ingin
           mencintaimu dengan sederhana; dengan isyarat yang tak sempat
-          disampaikan awan kepada hujan yang menjadikannya tiada."
+          disampaikan awan kepada hujan yang menjadikannya tiada.&quot;
           <br /> — Sapardi Djoko Damono
         </Text>
       </Box>

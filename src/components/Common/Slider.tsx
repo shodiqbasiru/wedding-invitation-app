@@ -17,6 +17,7 @@ export default function Slider() {
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const swiperRef = useRef<any>(null);
 
   useEffect(() => {
