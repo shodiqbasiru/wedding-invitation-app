@@ -3,17 +3,20 @@
 import { useEffect, useRef, useState } from "react";
 import CoverSection from "@/components/Home/CoverSection";
 import WelcomeSection from "@/components/Home/WelcomeSection";
-import { Box, Flex } from "@chakra-ui/react";
+import { Box, Flex, useDisclosure } from "@chakra-ui/react";
 import { GiHamburgerMenu } from "react-icons/gi";
 import { MdMusicNote } from "react-icons/md";
 import OpeningSection from "@/components/Home/OpeningSection";
 import FooterSection from "@/components/Home/FooterSection";
+import Navigation from "@/components/Common/Navigation";
 
 export default function Home() {
   const [openInvitation, setOpenInvitation] = useState<boolean>(false);
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isMuted, setIsMuted] = useState<boolean>(false);
+
+  const { isOpen, onOpen, onClose } = useDisclosure()
 
   const handleOpenInvitation = () => {
     setIsLoading(true);
@@ -41,10 +44,11 @@ export default function Home() {
   return (
     <>
       <audio ref={audioRef} src="/audio/invitation.mp3" loop/>
+      <Navigation isOpen={isOpen} onClose={onClose} />
       {openInvitation ? (
         <div id="welcome-section" className="slide-top">
           <Flex gap="1" position="fixed" zIndex="3" left="5" bottom="5">
-            <span className="button">
+            <span className="button" onClick={onOpen}>
               <GiHamburgerMenu />
             </span>
             <span className="button" onClick={handleMuteAudio} style={{position:"relative",}}>

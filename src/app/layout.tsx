@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "../assets/globals.css";
 import { Providers } from "./providers";
 import { Box, Flex } from "@chakra-ui/react";
-import SideBar from "../components/Home/SideBar";
+import SideBar from "../components/Common/SideBar";
 import { fonts } from "../assets/fonts/font";
 
 export const metadata: Metadata = {
