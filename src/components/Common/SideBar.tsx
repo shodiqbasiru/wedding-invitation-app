@@ -1,6 +1,5 @@
 import { fonts } from "@/assets/fonts/font";
-import { Box, Heading, Image, Text } from "@chakra-ui/react";
-import React from "react";
+import { Box, Heading, Text } from "@chakra-ui/react";
 
 export default function SideBar() {
   const { buttler, poppins } = fonts;
@@ -13,7 +12,7 @@ export default function SideBar() {
       height="100%"
       borderColor="blackAlpha.400"
       background={
-        "linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Desktop.jpg?updatedAt=1698223781539) center center / cover;"
+        "linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/bg.jpg') center center / cover;"
       }
     >
       <Box color="#fefefe" padding="42px">

@@ -1,22 +1,25 @@
 import { fonts } from "@/assets/fonts/font";
 import { Box, Flex, Heading, Button } from "@chakra-ui/react";
 
-interface CoverSectionProps { 
+interface CoverSectionProps {
   showInvitation: () => void;
   isLoading: boolean;
 }
 
-export default function CoverSection({ showInvitation,isLoading }: CoverSectionProps) {
+export default function CoverSection({
+  showInvitation,
+  isLoading,
+}: CoverSectionProps) {
   const { buttler, poppins } = fonts;
 
   return (
     <>
       <Box
-        height="100vh"  
+        height="100vh"
         width="100%"
         padding="2rem"
         color="white"
-        background="linear-gradient(rgb(50 48 48 / 50%), rgb(50 48 48 / 50%)), center / cover url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/1.%20Cover.jpg?updatedAt=1698222296920);"
+        background="linear-gradient(rgb(50 48 48 / 50%), rgb(50 48 48 / 50%)), center / cover url('/images/invitation-wedding-5.jpg');"
       >
         <Heading
           as="h2"
@@ -84,7 +87,9 @@ export default function CoverSection({ showInvitation,isLoading }: CoverSectionP
             isLoading={isLoading}
             onClick={() => {
               showInvitation();
-              document.getElementById("welcome-section")?.scrollIntoView({ behavior: "smooth" });
+              document
+                .getElementById("welcome-section")
+                ?.scrollIntoView({ behavior: "smooth" });
             }}
           >
             Open

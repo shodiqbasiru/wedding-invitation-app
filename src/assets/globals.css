@@ -28,11 +28,11 @@ body {
     cursor: pointer;
     border-radius: 100%;
     padding: 10px;
+    transition: background-color 0.3s, opacity 0.3s;
 }
 
 .button:hover {
-    background-color: #fefefe;
-    opacity: 0.5;
+    background-color: #e6e5e5ee;
 }
 
 @keyframes slideTop {
@@ -51,23 +51,28 @@ body {
     animation: slideTop 1s ease-out;
 }
 
-@media only screen and (min-width: 1028px) {
-    .web-view__left-side {
-        display: block;
-        width: calc(100% - 500px);
-    }
-
-    .web-view__right-side {
-        width: 500px;
-        margin: unset;
-    }
+.web-view__left-side {
+    display: block;
+    width: calc(100% - 500px);
 }
 
 .web-view__right-side {
-    width: 100%;
-    max-width: 500px;
-    margin: auto;
-    overflow-x: hidden;
+    width: 500px;
+    margin: unset;
+}
+
+@media only screen and (max-width: 1027px) {
+    .web-view__left-side {
+        display: none;
+    }
+
+    .web-view__right-side {
+        width: 100%;
+        max-width: 500px;
+        margin: auto;
+        overflow-x: hidden;
+        position:relative;
+    }
 }
 
 .slide,

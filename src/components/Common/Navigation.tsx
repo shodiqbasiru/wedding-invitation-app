@@ -3,19 +3,15 @@
 import { fonts } from "@/assets/fonts/font";
 import {
   Box,
-  Button,
   Divider,
   Flex,
   Heading,
   Link,
   Modal,
   ModalBody,
-  ModalCloseButton,
   ModalContent,
   ModalFooter,
-  ModalHeader,
   ModalOverlay,
-  Slide,
   Text,
 } from "@chakra-ui/react";
 import React from "react";
@@ -30,7 +26,12 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
   const finalRef = React.useRef(null);
   const { newsreader } = fonts;
   return (
-    <Modal finalFocusRef={finalRef} isOpen={isOpen} onClose={onClose}>
+    <Modal
+      finalFocusRef={finalRef}
+      isOpen={isOpen}
+      onClose={onClose}
+      motionPreset="slideInRight"
+    >
       <ModalOverlay />
       <ModalContent
         style={{
@@ -45,7 +46,7 @@ export default function Navigation({ isOpen, onClose }: NavigationProps) {
         maxHeight="100vh"
         margin="0"
         padding="24px 16px"
-        maxWidth="500px"
+        maxWidth="400px"
         outline="transparent solid 2px"
         outlineOffset="2px"
         backgroundColor="#f9f7f4"

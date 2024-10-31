@@ -16,7 +16,7 @@ export default function Home() {
   const audioRef = useRef<HTMLAudioElement>(null);
   const [isMuted, setIsMuted] = useState<boolean>(false);
 
-  const { isOpen, onOpen, onClose } = useDisclosure()
+  const { isOpen, onOpen, onClose } = useDisclosure();
 
   const handleOpenInvitation = () => {
     setIsLoading(true);
@@ -29,21 +29,21 @@ export default function Home() {
   };
 
   const handleMuteAudio = () => {
-    if(audioRef.current) {
+    if (audioRef.current) {
       audioRef.current.muted = !audioRef.current.muted;
       setIsMuted(audioRef.current.muted);
     }
-  }
+  };
 
   useEffect(() => {
-    if(openInvitation && audioRef.current) {
+    if (openInvitation && audioRef.current) {
       audioRef.current.play();
     }
   }, [openInvitation]);
 
   return (
     <>
-      <audio ref={audioRef} src="/audio/invitation.mp3" loop/>
+      <audio ref={audioRef} src="/audio/invitation.mp3" loop />
       <Navigation isOpen={isOpen} onClose={onClose} />
       {openInvitation ? (
         <div id="welcome-section" className="slide-top">
@@ -51,13 +51,13 @@ export default function Home() {
             <span className="button" onClick={onOpen}>
               <GiHamburgerMenu />
             </span>
-            <span className="button" onClick={handleMuteAudio} style={{position:"relative",}}>
+            <span
+              className="button"
+              onClick={handleMuteAudio}
+              style={{ position: "relative" }}
+            >
               <MdMusicNote />
-              {
-                isMuted && (
-                  <div className="line"></div>
-                )
-              }
+              {isMuted && <div className="line"></div>}
             </span>
           </Flex>
           <WelcomeSection />

@@ -1,8 +1,7 @@
 import { fonts } from "@/assets/fonts/font";
 import { Box, Flex, Heading, Link, Text } from "@chakra-ui/react";
-import React from "react";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
-import { FaEarthAsia, FaWebAwesome } from "react-icons/fa6";
+import { FaEarthAsia } from "react-icons/fa6";
 
 export default function FooterSection() {
   const { newsreader } = fonts;
@@ -37,21 +36,33 @@ export default function FooterSection() {
             Created by Shodiq Basiru
           </Heading>
           <Flex flexWrap="wrap" gap="4">
-            <Link href="https://github.com/shodiqbasiru" target="_blank" fontSize="35px">
+            <Link
+              href="https://github.com/shodiqbasiru"
+              target="_blank"
+              fontSize="35px"
+            >
               <span>
                 <FaGithub />
               </span>
             </Link>
 
-            <Link href="https://www.linkedin.com/in/shodiq-basiru/" target="_blank" fontSize="35px">
+            <Link
+              href="https://www.linkedin.com/in/shodiq-basiru/"
+              target="_blank"
+              fontSize="35px"
+            >
               <span>
                 <FaLinkedin />
               </span>
             </Link>
 
-            <Link href="https://shodiq-basiru.netlify.app/" target="_blank" fontSize="35px">
+            <Link
+              href="https://shodiq-basiru.netlify.app/"
+              target="_blank"
+              fontSize="35px"
+            >
               <span>
-              <FaEarthAsia />
+                <FaEarthAsia />
               </span>
             </Link>
           </Flex>

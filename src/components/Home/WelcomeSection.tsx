@@ -1,5 +1,3 @@
-import React from "react";
-
 import { fonts } from "@/assets/fonts/font";
 import { Box, Button, Flex, Heading } from "@chakra-ui/react";
 import { MdKeyboardArrowDown } from "react-icons/md";
@@ -9,15 +7,15 @@ export default function WelcomeSection() {
   return (
     <Box minHeight="100vh" backgroundColor="whitesmoke" position="relative">
       <div className="slide">
-        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Slideshow/Slideshow-Cover-1.jpg?updatedAt=1698222442642)"></Box>
+        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/invitation-wedding-1.jpg')"></Box>
 
-        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Slideshow/Slideshow-Cover-2.jpg?updatedAt=1698222443322)"></Box>
+        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/invitation-wedding-2.jpg')"></Box>
 
-        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Slideshow/Slideshow-Cover-3.jpg?updatedAt=1698222442828)"></Box>
+        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/invitation-wedding-3.jpg')"></Box>
 
-        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Slideshow/Slideshow-Cover-4.jpg?updatedAt=1698222541497)"></Box>
+        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/invitation-wedding-4.jpg')"></Box>
 
-        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url(https://ik.imagekit.io/drpq5xrph/Template%20Tiffany%20&%20Jared/Slideshow/Slideshow-Cover-5.jpg?updatedAt=1698222444372)"></Box>
+        <Box background="linear-gradient(rgba(50, 48, 48, 0.5), rgba(50, 48, 48, 0.5)), url('/images/invitation-wedding-5.jpg')"></Box>
       </div>
       <Box
         height="100vh"
@@ -75,7 +73,7 @@ export default function WelcomeSection() {
           textTransform="uppercase"
           rightIcon={<MdKeyboardArrowDown size="2em" />}
           background="transparent"
-          _hover = {{background: "transparent"}}
+          _hover={{ background: "transparent" }}
           color="#fefefe"
           marginLeft="auto"
           marginTop="2rem"
